@@ -22,7 +22,7 @@ Dlib 19.24
 > **시스템 동작 순서**
 > 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70515c0f-1ed0-4a76-9e09-7a2f2f400b08/Untitled.png)
+![Untitled (3)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/5c109e9b-8b62-45ed-a723-5742c94a3682)
 
 > **Dlib을 이용한 얼굴의 landmark 검출**
 > 
@@ -31,12 +31,13 @@ Dlib 19.24
 http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 - 68개의 얼굴의 특징점(facial landmarks) 검출
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe4e33c9-7849-4e41-bf5d-90024c2d65e0/Untitled.png)
+![Untitled (4)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/13153f97-5fb0-411e-9757-1b471a2913ee)
+
 
 > **1. 눈 졸음 상태 판단 - EAR(Eye Aspect Ratio) 이용**
 > 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad79d4aa-9e9d-4eb7-8d78-bb9c329abfe9/Untitled.png)
+![Untitled (5)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/084367b6-628c-477f-9617-cd44d0cbd9e6)
 
 - 눈의 landmark 좌표값을 얻음 → 각 눈은 6개의 (x, y) 좌표로 표현됨
 - 눈의 비율을 이용해 눈 감김 확인
@@ -60,7 +61,7 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
 - **[눈 졸음 상태 판단 알고리즘]**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21187465-aea8-4fe4-9581-1cdd2721146e/Untitled.png)
+    ![Untitled (6)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/1a80d589-a3a4-4412-b6fc-be1183c4fe67)
     
     ```
     - 운전자의 실시간 EAR 값이 구한 임계값보다 작은 경우 눈을 감은 상태로 인식
@@ -91,7 +92,7 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
     - y: 코 끝~턱의 거리(30~8)
 - **[고개숙임 판단 알고리즘]**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c50e6dd3-4028-4320-bfc4-d0993aa98e15/Untitled.png)
+    ![Untitled (7)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/735f63f7-90f9-44c0-82c5-7680726b681d)
     
     ```
     평상시 y대한 x의 비를 기준으로 1.15배 이상의 비가 측정되었을 때, 
@@ -117,9 +118,9 @@ gray-scale 이미지 + LAB 이미지 합성하는 방법을 이용**
 ```
 
 (a) Gray Scale Image
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f42ab56d-8e6f-46d5-b431-c55e2c3f32f2/Untitled.png)
-
+![Untitled (8)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/a4cbb336-4192-43ad-bc30-4fd1314fe204)
+(b) Gray Scale Image + LAB Image
+![Untitled (9)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/e8e28017-0f6a-4901-b159-0c2752adbe73)
 > 개선사항
 > 
 
