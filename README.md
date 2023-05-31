@@ -17,13 +17,13 @@ https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261
 
 
 💡 사람마다 다른 얼굴의 특징점을 고려한 적응형 졸음 감지 알고리즘 개발
-> **개발 환경**
+> 개발 환경
 > 
 - Python 3.10.5
 - OpenCV 4.6.0
 Dlib 19.24
 
-> **시스템 동작 순서**
+> 시스템 동작 순서
 > 
 
 ![Untitled (3)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/5c109e9b-8b62-45ed-a723-5742c94a3682)
@@ -48,18 +48,18 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
     - 오른쪽 눈: 36 - 41, 왼쪽 눈: 42 - 47
     
     ```python
-    **[Problem]** : 사람의 눈 크기는 전부 다름
-    **고정된 임계값(threshold)**을 사용하면, 
+    [Problem] : 사람의 눈 크기는 전부 다름
+    고정된 임계값(threshold)을 사용하면, 
     눈을 뜨고 있음에도 눈을 감고있다고 인식하는 문제 발생
     ```
     
     ```python
-    **[Solution]
-    적응형 EAR 임계값(threshold)** 사용
+    [Solution]
+    적응형 EAR 임계값(threshold) 사용
     1. 시스템을 시작하면 사용자에게 눈을 편안하게 뜬 상태를 6초 동안 유지하도록 안내
     2. 눈 뜬 상태의 평균 EAR 측정 (6초간)
     3. 같은 방법으로 눈 감은 상태의 평균 EAR 측정 (6초간)
-    → **두 EAR 값의 평균 값을 눈의 임계값(threshold)으로 사용**
+    → 두 EAR 값의 평균 값을 눈의 임계값(threshold)으로 사용
     ```
     
 
@@ -112,12 +112,12 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 그림(a) : 카메라로부터 받은 영상 이미지를 gray-scale 이미지만 합성
 그림(b) : 카메라로부터 받은 영상 이미지를 gray-scale 이미지 + LAB 이미지 합성
 
-**[gray-scale 이미지만 합성한 경우의 문제점]**
+[gray-scale 이미지만 합성한 경우의 문제점]
 (a)의 경우, 얼굴의 landmark 인식률이 떨어짐을 확인
 눈의 EAR 임계값을 측정한 결과가 크게 차이나고, 눈의 감김 상태 역시 인식하지 못함
 
-**[해결방법]
-gray-scale 이미지 + LAB 이미지 합성하는 방법을 이용**
+[해결방법]
+gray-scale 이미지 + LAB 이미지 합성하는 방법을 이용
 (b)의 결과 화면을 보면, 밝기로 인한 졸음 상태 검출의 오차를 줄일 수 있음을 확인
 ```
 
