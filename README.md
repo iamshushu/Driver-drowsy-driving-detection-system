@@ -118,9 +118,14 @@ gray-scale 이미지 + LAB 이미지 합성하는 방법을 이용**
 ```
 
 (a) Gray Scale Image
+
 ![Untitled (8)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/a4cbb336-4192-43ad-bc30-4fd1314fe204)
+
 (b) Gray Scale Image + LAB Image
+
 ![Untitled (9)](https://github.com/iamshushu/Driver-drowsy-driving-detection-system/assets/78261259/e8e28017-0f6a-4901-b159-0c2752adbe73)
+
+
 > 개선사항
 > 
 
