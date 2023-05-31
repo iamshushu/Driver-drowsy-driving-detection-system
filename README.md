@@ -41,7 +41,7 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
 - 눈의 landmark 좌표값을 얻음 → 각 눈은 6개의 (x, y) 좌표로 표현됨
 - 눈의 비율을 이용해 눈 감김 확인
-    - 오른쪽 눈: 36~41 / 왼쪽 눈: 42~47
+    - 오른쪽 눈: 36~41, 왼쪽 눈: 42~47
     
     ```python
     **[Problem]** : 사람의 눈 크기는 전부 다름
@@ -73,7 +73,7 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 > **2. 하품 상태 판단 - EAR(Eye Aspect Ratio) 알고리즘**
 > 
 - 입의 landmark 좌표값을 얻음
-    - outline: 48~59 / inline: 60~67
+    - outline: 48~59, inline: 60~67
 - 입술의 inline의 가장 높은 좌표값과 가장 낮은 좌표값을 이용해 입의 높이 측정
 
 - **[하품 상태 판단 알고리즘]**
